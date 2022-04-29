@@ -18,7 +18,7 @@ spec:
       - name: vprodb
         image: vprofile/vprofiledb:V1
         args:
-          - "ignore-db-dir=lost+found" # to avoid an error due to format ext4 creating a directory lost+found
+          - "--ignore-db-dir=lost+found" # to avoid an error due to format ext4 creating a directory lost+found
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: vpro-db-data
